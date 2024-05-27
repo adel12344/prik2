@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/font/Montserrat.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  background-color: #FEFDED;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  margin: 10vh 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+aside {
+  min-width: 20vw;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+#openNav {
+  width: 40px;
+  height: 40px;
+  background: #4F6F52;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10000;
+  cursor: pointer;
+
+}
+
+header img{
+
+  border-radius: 10px;
+  color: #4F6F52;
+}
+
+nav {
+  position: fixed;
+  z-index: 200;
+  height: 100vh;
+  width: 300px;
+  background-color:#FFF2E1
+}
+
+nav h2 {
+  font-size: 18px;
+}
+
+#logo {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  z-index: 100;
+  color: white;
+  font-size: 60px;
+}
+
+#titre {
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  margin: auto;
+}
+
+.carousel-inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-control {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+article {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10vh 20px;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2,
+h1 {
+  color: #4F6F52;
+}
+
+article img {
+  margin-right: 50px;
+  transition: all 0.3s;
+}
+
+article img:hover {
+  transform: scale(1.1);
+}
+
+article p {
+  text-align: justify;
+}
+.intro {
+  
+ 
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10vh 20px;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+}
+.Objectifs {
+  
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10vh 20px;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+}
