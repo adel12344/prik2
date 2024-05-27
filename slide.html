@@ -1,0 +1,286 @@
+<?php
+$file = 'comments.txt';
+
+// Handle form submission
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = htmlspecialchars($_POST['email']);
+    $comment = htmlspecialchars($_POST['comment']);
+
+    // Save the comment
+    $entry = "Email: $email\nComment: $comment\n\n";
+    file_put_contents($file, $entry, FILE_APPEND);
+}
+
+// Read existing comments
+$comments = file_exists($file) ? file_get_contents($file) : '';
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/slide/slide.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 id="logo">img+NAME</h1>
+
+      <button id="openNav" onclick="openNav()">
+        <img
+          class="imgg"
+          src="png-transparent-hamburger-button-computer-icons-menu-navigation-angle-white-text-thumbnail.png"
+          width="30"
+          height="30"
+          style="position: absolute; top: 5px; left: 5px"
+        />
+      </button>
+      <nav>
+        <button id="close-nav" onclick="closeNav()">
+          <svg
+            fill="#ffffff"
+            height="30px"
+            width="30px"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 460.775 460.775"
+            xml:space="preserve"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"
+              ></path>
+            </g>
+          </svg>
+        </button>
+        <h2>NOM PRENOM</h2>
+        <h2>EMAIL</h2>
+        <h2>MATRICULE</h2>
+        <div>
+          <a href="">ARTICLE1</a>
+          <a href="">ARTICLE2</a>
+          <a href="">ARTICLE3</a>
+        </div>
+      </nav>
+      <div id="overlay" onclick="closeNav()"></div>
+
+      <div class="carousel">
+        <div class="carousel-inner">
+          <img
+            class="carousel-item"
+            src="https://cdn.takeoutcentral.com/restlogos/rest839menu_hero32.jpg"
+            alt=""
+          />
+
+          <img
+            class="carousel-item"
+            src="https://www.hotelterrano.cl/wp-content/uploads/2021/10/top-restaurant-hotel.jpg"
+            alt=""
+          />
+
+          <img
+            class="carousel-item"
+            src="https://www.jimprimeenfrance.fr/Content/images/landing-page/bandeaux-titre/imprimeur-restauration.jpg"
+            alt=""
+          />
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-control prev">&lt;</button>
+          <button class="carousel-control next">&gt;</button>
+        </div>
+      </div>
+    </header>
+
+    <h1 id="titre">Bienvenu dans notre École</h1>
+
+    <main>
+      <section id="articles">
+        <div class="article">
+          <h2>Introduction</h2>
+          <div class="article-content">
+            <h3>
+              Bienvenue à la formation "Exploration de l'univers culinaire" !
+              Cette formation est conçue pour vous plonger dans le monde
+              fascinant de la nourriture, où chaque saveur, chaque ingrédient et
+              chaque technique de cuisine racontent une histoire unique. Au
+              cours de cette session, nous allons explorer les fondements de la
+              gastronomie, découvrir les secrets des cuisines du monde entier,
+              et apprendre à transformer des ingrédients simples en plats
+              extraordinaires.
+            </h3>
+            <img width="300px" src="about us/1700920871203.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="article">
+          <h2>Objectifs de la formation</h2>
+          <div class="article-content">
+            <h3>
+              <ol>
+                <li>
+                  Comprendre les bases de la gastronomie et de l'art culinaire.
+                </li>
+                <li>
+                  Explorer les différentes cuisines régionales à travers le
+                  monde.
+                </li>
+                <li>
+                  Maîtriser les techniques de préparation et de cuisson des
+                  aliments.
+                </li>
+                <li>
+                  Développer votre créativité en cuisine et apprendre à
+                  improviser.
+                </li>
+                <li>
+                  Apprendre à apprécier la diversité des saveurs et des
+                  textures.
+                </li>
+              </ol>
+            </h3>
+            <img
+              width="400px"
+              src="about us/YlKJRdlVRgehVg8JX1fDzg.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <article>
+          <a href="blwa.html"
+            ><img
+              width="200px"
+              src="data:image/jpeg;base64,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"
+              alt=""
+          /></a>
+          <div>
+            <h2>formation Art culinaire</h2>
+            <p>
+              Bienvenue à notre formation en art culinaire, où la passion pour
+              la cuisine rencontre l'expertise technique. Que vous soyez un
+              amateur enthousiaste ou un professionnel cherchant à perfectionner
+              vos compétences, cette formation est conçue pour vous inspirer,
+              vous enseigner et vous guider à travers les merveilles de la
+              gastronomie
+            </p>
+            <h4>Plus d'infos: <a href="blwa.html">ici</a></h4>
+          </div>
+        </article>
+        <article>
+          <a href="clwa.html"><img width="200px" src="ramen.webp" alt="" /></a>
+          <div>
+            <h2>cuisine japonaise</h2>
+            <p>
+              La cuisine japonaise est fraîche, équilibrée et joliment
+              présentée. Des sushis aux ramens, elle offre une grande variété de
+              plats délicieux. Les ingrédients sont frais et préparés avec soin
+              pour éveiller vos papilles. C'est une cuisine où l'attention à la
+              présentation est importante. Que vous aimiez les sushis ou les
+              plats chauds comme les ramens, la cuisine japonaise est une
+              expérience culinaire délicieuse à découvrir.
+            </p>
+            <h4>Plus d'infos: <a href="clwa.html">ici</a></h4>
+          </div>
+        </article>
+        <article>
+          <a href="alwa.html"><img width="200px" src="7lwa.jpg" alt="" /></a>
+          <div>
+            <h2>Formation en pâtisserie classique</h2>
+            <p>
+              La pâtisserie, c'est l'art de créer des desserts délicieux. Des
+              gâteaux aux biscuits en passant par les tartes, chaque recette est
+              une explosion de saveurs sucrées. Que vous aimiez décorer des
+              gâteaux ou préparer des petits gâteaux pour une fête, la
+              pâtisserie offre une multitude de possibilités créatives. C'est un
+              monde sucré où chacun peut exprimer sa créativité et régaler ses
+              papilles.
+            </p>
+            <h4>Plus d'infos: <a href="alwa.html">ici</a></h4>
+          </div>
+        </article>
+      </section>
+
+      <aside>
+        <h1>THIS IS AN AD</h1>
+        <div id="carousel2" class="carousel">
+          <div class="carousel-inner2">
+            <div class="carousel-item2">
+              <img
+                width="70%"
+                src="https://static.vecteezy.com/system/resources/previews/011/297/521/original/promotion-30-number-percent-png.png"
+                alt="Image 1"
+              />
+              <div class="carousel-description">
+                Formation Art Culinaire - 30% de réduction
+              </div>
+            </div>
+            <div class="carousel-item2">
+              <img
+                width="70%"
+                src="https://static.vecteezy.com/system/resources/previews/011/288/009/original/promotion-50-number-percent-png.png"
+                alt="Image 2"
+              />
+              <div class="carousel-description">
+                Cuisine Japonaise - 50% de réduction
+              </div>
+            </div>
+            <div class="carousel-item2">
+              <img
+                width="70%"
+                src="https://static.vecteezy.com/system/resources/previews/008/880/262/non_2x/discount-70-percent-red-offer-in-3d-png.png"
+                alt="Image 3"
+              />
+              <div class="carousel-description">
+                Formation en Pâtisserie Classique - 70% de réduction
+              </div>
+            </div>
+          </div>
+          <div class="carousel-controls2">
+            <button class="carousel-control2 prev2">&lt;</button>
+            <button class="carousel-control2 next2">&gt;</button>
+          </div>
+        </div>
+      </aside>
+
+      <footer>
+        <h1>Leave a comment</h1>
+        <div id="comments">
+          <h2>Comments</h2>
+          <pre><?php echo $comments; ?></pre>
+        </div>
+        <form action="comments.php" method="POST">
+          <div>
+            <label for="email">Email</label>
+            <input
+              placeholder="Ajouter votre email"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div>
+            <label for="comment">Comment</label>
+            <textarea
+              placeholder="Entrez votre commentaire ici"
+              name="comment"
+              id="comment"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

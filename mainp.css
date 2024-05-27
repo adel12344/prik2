@@ -1,0 +1,75 @@
+body {
+    background: url('main pic.PNG');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    margin: 0; 
+    height: 100vh; 
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); 
+    z-index: 9999;
+}
+
+.logo1 {
+    position: fixed; /* Changed from relative to fixed to help with centering */
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    z-index: 10000; 
+    text-align: center; /* Center-align the content within the div */
+}
+
+.logo1 img {
+    width: 500px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    
+}
+.rect{
+    width: 5px; 
+    height: 400px; 
+    background-color: #ffffff; 
+    border-radius: 5px;
+    position: fixed; /* Changed from relative to fixed to help with centering */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000; 
+}
+.text{
+position: fixed;
+    top: 50%;
+    left: 59%;
+    color: #ffffff; 
+    transform: translate(-50%, -50%);
+    z-index: 10000; 
+    text-align: center; 
+    font-size: 24px;
+    font-family: "Arial",serif;
+}
+.button {
+    position: fixed;
+    top: 85%; 
+    left:43%; 
+    padding: 10px 20px; 
+    background-color: #ffffff;
+    color: #000000; 
+    border: none;
+    border-radius: 18px;
+    font-size: 20px;
+    text-decoration: none; 
+    cursor: pointer;
+    z-index: 10000; 
+    width: 170px;
+    height: 15px;
+    text-align: center;
+    font-family: "Arial",serif;
+}
+.button:hover {
+    background-color: #f0f0f0; 
+}

@@ -1,0 +1,300 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/font/Montserrat.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background: white;
+  background-color: #FEFDED;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 10vh;
+  align-items: center;
+  padding-right: 20vw;
+}
+
+aside {
+  width: 20vw;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: fixed;
+  top: 25vh;
+  right: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#openNav {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  background: #4F6F52;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10000;
+  cursor: pointer;
+
+}
+
+header img {
+  border-radius: 10px;
+  color: #4F6F52;
+}
+
+nav {
+  position: fixed;
+  z-index: 200;
+  height: 100vh;
+  width: 300px;
+  background-color: #FFF2E1;
+  left: -360px;
+  padding: 20px 30px;
+  transition: left 0.5s;
+}
+
+nav h2 {
+  font-size: 18px;
+}
+
+#logo {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  z-index: 100;
+  color: white;
+  font-size: 60px;
+}
+
+#titre {
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.carousel-inner,
+.carousel-inner2 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item,
+.carousel-item2 {
+  min-width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.carousel-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.carousel-controls,
+.carousel-controls2 {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-control,
+.carousel-control2 {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+article {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10vh 20px;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2,
+h1 {
+  color: #4F6F52;
+}
+
+article img {
+  margin-right: 50px;
+  transition: all 0.3s;
+}
+
+article img:hover {
+  transform: scale(1.1);
+}
+
+article p {
+  text-align: justify;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 10vh 20px;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+}
+
+.article-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article h3 {
+  width: 60%;
+}
+
+.Objectifs {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10vh 20px;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 100;
+}
+
+.nav-open nav {
+  left: 0;
+}
+
+.nav-open #overlay {
+  display: block;
+}
+
+.nav-open #openNav {
+  display: none;
+  transition: all 0.5s;
+}
+
+#close-nav {
+  position: absolute;
+  top: 10px;
+  padding: 5px;
+  right: 20px;
+  background-color: #4F6F52;
+  color: white !important;
+  border: none;
+  cursor: pointer;
+}
+
+footer h1,
+footer h2 {
+  text-transform: uppercase;
+}
+
+form {
+  width: 30vw;
+  padding: 5vh;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: white;
+
+}
+
+input {
+  height: 10px;
+  width: 300px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+textarea {
+  height: 50px;
+  width: 300px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#comments {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

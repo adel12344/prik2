@@ -1,6 +1,0 @@
-body {
-    background-image: url('https://cdn.discordapp.com/attachments/1206374450111713321/1244713592700403762/art-culinaire.jpg?ex=66561d5e&is=6654cbde&hm=aee76c04ada52b53d6307873c14e32778b67c9f2a7067002dc562e43222d26cd&');
-    background-size: cover; /* Cover the entire element */
-    background-position: center; /* Center the background image */
-    height: 100vh; /* Set the height of the element to the full viewport height */
-}
